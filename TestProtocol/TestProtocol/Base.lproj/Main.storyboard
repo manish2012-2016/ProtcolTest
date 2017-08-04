@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RecevingVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RecevingVC" customModule="TestProtocol" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7is-jx-XoL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="RecevingVC" id="2Ap-Rj-eOO">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="h92-kv-mAl">
+                                            <connections>
+                                                <segue destination="rqv-NZ-PYP" kind="show" identifier="sentDataSegue" id="njt-cz-xxD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-MV-jVf">
+                                <rect key="frame" x="27" y="98" width="306" height="505"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="505" id="tq5-hF-fEw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h4v-MV-jVf" secondAttribute="bottom" constant="64" id="AAO-lm-aea"/>
+                            <constraint firstAttribute="trailing" secondItem="7is-jx-XoL" secondAttribute="trailing" id="Klv-mn-H5a"/>
+                            <constraint firstItem="7is-jx-XoL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RQQ-PK-Umf"/>
+                            <constraint firstItem="7is-jx-XoL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zzr-fn-5ra"/>
+                            <constraint firstItem="h4v-MV-jVf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="azW-dh-jc1"/>
+                            <constraint firstItem="7is-jx-XoL" firstAttribute="leading" secondItem="h4v-MV-jVf" secondAttribute="trailing" constant="-333" id="nxc-zf-6Kc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recevingDataLabel" destination="h4v-MV-jVf" id="nAp-Dy-EfR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Sending Data View Controller-->
+        <scene sceneID="bhM-j5-1Ut">
+            <objects>
+                <viewController id="rqv-NZ-PYP" customClass="SendingDataViewController" customModule="TestProtocol" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="trs-kL-HQ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="d6b-Xk-Uq6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7s7-Is-QCn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Type Text Here👉" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Job-9a-iDV">
+                                <rect key="frame" x="23" y="77" width="336" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="mYb-XY-4xL"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ja6-04-vhJ">
+                                <rect key="frame" x="23" y="143" width="336" height="53"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="8so-eI-WOM"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SEND">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="24" name="AvenirNext-Regular"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="sentDataByButton:" destination="rqv-NZ-PYP" eventType="touchUpInside" id="c5c-nx-pRR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Job-9a-iDV" firstAttribute="leading" secondItem="7s7-Is-QCn" secondAttribute="leadingMargin" constant="7" id="18I-ES-klg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Job-9a-iDV" secondAttribute="trailing" id="5BB-zO-ieJ"/>
+                            <constraint firstItem="Ja6-04-vhJ" firstAttribute="trailing" secondItem="Job-9a-iDV" secondAttribute="trailing" id="FNm-fG-xI9"/>
+                            <constraint firstItem="Ja6-04-vhJ" firstAttribute="top" secondItem="Job-9a-iDV" secondAttribute="bottom" constant="8" id="SI9-7i-vH9"/>
+                            <constraint firstItem="Ja6-04-vhJ" firstAttribute="leading" secondItem="Job-9a-iDV" secondAttribute="leading" id="dUp-4W-mAH"/>
+                            <constraint firstItem="Job-9a-iDV" firstAttribute="top" secondItem="trs-kL-HQ4" secondAttribute="bottom" constant="57" id="hA9-fb-Uc7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldOutlet" destination="Job-9a-iDV" id="N7i-h4-A2I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iN1-dM-2ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="864.79999999999995" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
